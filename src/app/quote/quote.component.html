@@ -1,9 +1,15 @@
 <h1>My Quote</h1>
 <hr>
-<ul>
-  <div *ngFor='let quote of quotes;let i=index'>
-    <li>{{quote.name}} posted on {{quote.postDate|date}}</li>
-    <button (click)='toggleDetails(i)'>Toggle Details</button>
-    <app-quote-details *ngIf= "quote.showDescription" [quote] ='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+<div class="container">
+  <div class="row" *ngFor='let quote of quotes;let i=index'>
+    <div class="row">
+      <h4 id="{{i}}">{{quote.name}} posted on {{quote.postDate|date}}</h4>
+      <br>
+      <button type="button" class ="btn btn-primary btn-sm"(click)='toggleDetails(i)'>Toggle Details</button>
+    </div>
+    <div class="row" *ngIf="quote.showDescription">
+      <app-quote-details *ngIf="quote.showDescription" [quote]='quote'
+      (isComplete)='deleteQuote($event,i)'></app-quote-details>
+    </div>
   </div>
-</ul>
+</div>
