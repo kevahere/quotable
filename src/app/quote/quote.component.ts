@@ -10,6 +10,10 @@ export class QuoteComponent implements OnInit {
     new Quote(1, "he who laughs last","Kevin"),
     new Quote(1, "simba mwenda pole","Ahere")
   ]
+
+  toggleDetails(index){
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {
