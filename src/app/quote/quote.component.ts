@@ -7,8 +7,8 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote(1, "he who laughs last"),
-    new Quote(1, "simba mwenda pole")
+    new Quote(1, "he who laughs last","Kevin"),
+    new Quote(1, "simba mwenda pole","Ahere")
   ]
   constructor() { }
 
