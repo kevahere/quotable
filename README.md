@@ -2,6 +2,7 @@
 
 this project  was built by Kevin Ahere as part of an assignment and also to address the growing need for good quote websites. Allows the user to add quotes and remove them.Date psted can also be seen.
 A future version will let users view the most popular quote.
+YOu can view the production version on :https://kevahere.github.io/quotable/
 
 ## Development server
 
