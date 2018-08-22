@@ -1,6 +1,7 @@
 # Quotable
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.0-beta.1.
+this project  was built by Kevin Ahere as part of an assignment and also to address the growing need for good quote websites. Allows the user to add quotes and remove them.Date psted can also be seen.
+A future version will let users view the most popular quote.
 
 ## Development server
 
