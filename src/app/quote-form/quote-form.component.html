@@ -3,7 +3,7 @@
     <form (ngSubmit)='submitQuote' #goalForm='ngForm'>
       <div class="form-group">
         <label for="name">Quote</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name"> Display {{newQuote.name}}
+        <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">{{newQuote.name}}
       </div>
       <div class="form-group">
         <label for="description">Author</label>
