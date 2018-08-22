@@ -1,16 +1,20 @@
-<div class="jumbotron">
-  <h1>Quotable</h1>
+<div class="jumbotron bg-dark text-white">
+  <div class="row">
+    <h1>Quotable</h1><i class="fas fa-quote-right"></i>
+  </div>
 </div>
 <hr>
 <div class="container">
   <div class="row">
-   <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
   <div class="row" *ngFor='let quote of quotes;let i=index'>
     <div class="row">
       <h4 id="{{i}}">{{quote.name}} posted on {{quote.postDate|date}}</h4>
       <br>
-      <button type="button" class="btn btn-primary btn-sm" (click)='toggleDetails(i)'>Toggle Details</button>
+      <div class="mx-auto" style="width: 200px;">
+        <button type="button" class="btn btn-outline-primary" (click)='toggleDetails(i)'>Toggle Details</button>
+      </div>
     </div>
     <div class="row" *ngIf="quote.showDescription">
       <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
